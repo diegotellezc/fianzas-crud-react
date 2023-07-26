@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Modal = ({ isShowedForm, setIsShowedForm, register, handleSubmit, submit, reset, setIsServiceIdToEdit, isServiceIdToEdit, errors }) => {
+const ServicesModal = ({ isShowedForm, setIsShowedForm, register, handleSubmit, submit, reset, setIsServiceIdToEdit, isServiceIdToEdit, errors }) => {
     const handleClickCloseModal = () => {
         setIsShowedForm((isShowedForm) => !isShowedForm)
         reset({
@@ -27,10 +27,10 @@ const Modal = ({ isShowedForm, setIsShowedForm, register, handleSubmit, submit, 
                     <input className='border-[1px] rounded-sm bg-gray-100 p-1 focus:ring-1 focus:ring-primary-color focus:border-primary-color' id='name' type="text" {...register("name", { 
                         required: "This field is required", maxLength: {
                             value: 25,
-                            message: "You have exceeded the maximum characters allowed"
+                            message: "Usted ha excedido el máximo de caracteres permitidos."
                         }, minLength: {
                             value: 2,
-                            message: "You must enter more than one character"
+                            message: "Debe introducir más de un caracter."
                         } })} />
                     <span className='text-primary-color text-xs'>
                         {errors.name && errors.name.message}
@@ -41,11 +41,11 @@ const Modal = ({ isShowedForm, setIsShowedForm, register, handleSubmit, submit, 
                     <label className='text-xs font-semibold' htmlFor="lastname">Apellidos<span className='text-red-500'>*</span></label>
                     <input className='border-[1px] rounded-sm bg-gray-100 p-1 focus:ring-1 focus:ring-primary-color focus:border-primary-color' id='lastname' type="text" {...register("lastname", { 
                         required: "This field is required", maxLength: {
-                            value: 25,
-                            message: "You have exceeded the maximum characters allowed"
+                            value: 45,
+                            message: "Usted ha excedido el máximo de caracteres permitidos."
                         }, minLength: {
                             value: 2,
-                            message: "You must enter more than one character"
+                            message: "Debe introducir más de un caracter."
                         }})} />
                     <span className='text-primary-color text-xs'>
                         {errors.lastname && errors.lastname.message}
@@ -57,10 +57,10 @@ const Modal = ({ isShowedForm, setIsShowedForm, register, handleSubmit, submit, 
                     <input className='border-[1px] rounded-sm bg-gray-100 p-1 focus:ring-1 focus:ring-primary-color focus:border-primary-color' id='email' type="email" {...register("email", { 
                         required: "This field is required", maxLength: {
                             value: 150,
-                            message: "You have exceeded the maximum characters allowed"
+                            message: "Usted ha excedido el máximo de caracteres permitidos."
                         }, minLength: {
                             value: 2,
-                            message: "You must enter more than one character"
+                            message: "Debe introducir más de un caracter."
                         } })} />
                         <span className='text-primary-color text-xs'>
                             {errors.email && errors.email.message}
@@ -72,10 +72,10 @@ const Modal = ({ isShowedForm, setIsShowedForm, register, handleSubmit, submit, 
                     <input className='border-[1px] rounded-sm bg-gray-100 p-1 focus:ring-1 focus:ring-primary-color focus:border-primary-color' id='title' type="text" {...register("title", { 
                         required: "This field is required", maxLength: {
                             value: 25,
-                            message: "You have exceeded the maximum characters allowed"
+                            message: "Usted ha excedido el máximo de caracteres permitidos."
                         }, minLength: {
                             value: 2,
-                            message: "You must enter more than one character"
+                            message: "Debe introducir más de un caracter."
                         } })} />
                     <span className='text-primary-color text-xs'>
                         {errors.title && errors.title.message}
@@ -83,25 +83,25 @@ const Modal = ({ isShowedForm, setIsShowedForm, register, handleSubmit, submit, 
                 </div>
 
                 <div className='grid gap-1'>
-                    <label className='text-xs font-semibold' htmlFor="description">Descripción</label>
+                    <label className='text-xs font-semibold' htmlFor="description">Descripción <span className='text-red-500'>*</span></label>
                     <input className='border-[1px] rounded-sm bg-gray-100 p-1 focus:ring-1 focus:ring-primary-color focus:border-primary-color placeholder:text-xs' id='description' type="text" {...register("description", { 
                         required: "This field is required", maxLength: {
-                            value: 55,
-                            message: "You have exceeded the maximum characters allowed"
+                            value: 150,
+                            message: "Usted ha excedido el máximo de caracteres permitidos."
                         }, minLength: {
                             value: 2,
-                            message: "You must enter more than one character"
+                            message: "Debe introducir más de un caracter."
                         } })} />
                     <span className='text-primary-color text-xs'>{errors.description && errors.description.message}</span>
                 </div>
 
                 <i onClick={handleClickCloseModal} className='bx bx-x absolute right-2 top-1 text-2xl hover:text-primary-color cursor-pointer'></i>
 
-                <button className='bg-primary-color text-white p-2 text-sm border-2 border-transparent hover:text-[0.9rem] hover:border-secondary-color transition-colors rounded-md sm:max-w-max sm:mx-auto sm:px-8'>{isServiceIdToEdit ? "Save changes" : "Add new service"}</button>
+                <button className='bg-primary-color text-black p-2 text-sm border-2 border-transparent hover:text-[0.9rem] hover:border-secondary-color transition-colors rounded-md sm:max-w-max sm:mx-auto sm:px-8'>{isServiceIdToEdit ? "Guardar cambios" : "Añadir solicitud"}</button>
             </form>
         
         </section>
     )
 }
 
-export default Modal
+export default ServicesModal

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const ServicesCard = ({ services, deleteService, handleClickEdit }) => {
+const RequestsCard = ({ requests, deleteRequest, handleClickEdit }) => {
     const [showButtons, setShowButtons] = useState(false);
 
     const showingButtons = () => {
@@ -24,12 +24,12 @@ const ServicesCard = ({ services, deleteService, handleClickEdit }) => {
                 } transition-opacity duration-300 absolute top-0 left-0 w-full h-full flex justify-center items-center z-10`}
             >
                 <div className="flex flex-col justify-center gap-3 text-xl">
-                    <button onClick={() => handleClickEdit(services)}
+                    <button onClick={() => handleClickEdit(requests)}
                     className="bg-secondary-color text-white rounded-md px-4 py-2 mr-2 w-32 hover:bg-white hover:text-secondary-color hover:shadow-md hover:shadow-secondary-color">
                         Editar
                     </button>
 
-                    <button onClick={() => deleteService(services.id)}
+                    <button onClick={() => deleteRequest(requests.id)}
                     className="bg-primary-color text-white rounded-md px-4 py-2 w-32 hover:bg-white hover:text-primary-color hover:shadow-sm hover:shadow-primary-color">
                         Borrar
                     </button>
@@ -41,31 +41,31 @@ const ServicesCard = ({ services, deleteService, handleClickEdit }) => {
                 showButtons ? "opacity-20" : "opacity-100"
                 } transition-opacity duration-300 absolute bottom-0 left-0 w-full px-3 py-2 bg-white rounded-b-lg overflow-hidden`}
             >
-                <h2 className="text-lg font-bold my-2 text-center truncate"> Asesoría No. {`${services.id}`}
+                <h2 className="text-lg font-bold my-2 text-center truncate"> Reclamo No. {`${requests.id}`}
                 </h2>
 
                 <p className="text-gray-500 text-sm mb-2 truncate capitalize">
-                <strong>Nombre:</strong> {services.name}
+                <strong>Nombre:</strong> {requests.name}
                 </p>
 
                 <p className="text-gray-500 text-sm mb-2 truncate capitalize">
-                <strong>Apellidos:</strong> {services.lastname}
+                <strong>Apellidos:</strong> {requests.lastname}
                 </p>
 
                 <p className="text-gray-500 text-sm mb-2 truncate">
-                <strong>Correo:</strong> {services.email}
+                <strong>Correo:</strong> {requests.email}
                 </p>
 
                 <p className="text-gray-500 text-sm mb-2 truncate">
-                <strong>Titulo: </strong>{services.title}
+                <strong>Titulo: </strong>{requests.title}
                 </p>
 
                 <p className="text-gray-500 text-sm mb-2 truncate">
-                <strong>Descripción: </strong>{services.description}
+                <strong>Descripción: </strong>{requests.description}
                 </p>
             </div>
         </article>
     )
 }
 
-export default ServicesCard
+export default RequestsCard

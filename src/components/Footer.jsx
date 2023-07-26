@@ -13,12 +13,12 @@ const Footer = () => {
                     <i className='bx bxl-linkedin-square' ></i>
                 </a>
 
-                <a className='text-4xl text-secondary-color hover:text-primary-color hover:animate-bounce' target='_blank' href="https://rickandmorty-bydt.netlify.app/">
+                <a className='text-4xl text-secondary-color hover:text-primary-color hover:animate-bounce' target='_blank' href="https://diegotellez-portfolio.netlify.app/">
                     <i className='bx bx-question-mark' ></i>
                 </a>
             </div>
 
-            <p className='md:order-2 text-secondary-color'>• Copyright ©2023 | All rights reserved •</p>
+            <p className='md:order-2 text-secondary-color'>• Copyright ©2023 | Todos los derechos reservados •</p>
             <p className='text-secondary-color'>@diegotellezc</p>
         </footer>
     )
