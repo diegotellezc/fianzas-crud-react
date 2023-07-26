@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header className='bg-secondary-color w-full m-0 p-4 text-center flex justify-center items-center gap-4 md:flex-row md:justify-between'>
           <div className='w-[15rem] ml-20 py-3'>
-            <img src="/public/Logo-fianzas.png" alt="logo-fianzas" className='w-full' />
+            <img src="/logo-fianzas.png" alt="logo-fianzas" className='w-full' />
           </div>
 
           <nav className='text-white flex gap-6 mr-20'>
