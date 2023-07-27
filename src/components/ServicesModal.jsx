@@ -20,7 +20,7 @@ const ServicesModal = ({ isShowedForm, setIsShowedForm, register, handleSubmit, 
 
             <form onSubmit={handleSubmit(submit)} className='bg-white p-4 grid gap-4 rounded-md w-[300px] relative overflow-y-auto sm:w-[450px] sm:py-6 sm:px-8'>
 
-                <h3 className='text-2xl font-bold text-secondary-color'>{isServiceIdToEdit ? "Update service" : "New service"}</h3>
+                <h3 className='text-2xl font-bold text-secondary-color'>{isServiceIdToEdit ? "Editar asesoría" : "Nueva asesoría"}</h3>
 
                 <div className='grid gap-1'>
                     <label className='text-xs font-semibold' htmlFor="name">Nombre<span className='text-red-500'>*</span></label>
